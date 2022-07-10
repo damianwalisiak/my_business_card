@@ -14,7 +14,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
-      home: const Scaffold(),
+      home: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: const AssetImage('images/flutter_logo_wallpapre.png'),
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.9), BlendMode.dstATop),
+              fit: BoxFit.fitWidth,
+              alignment: Alignment.topCenter,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
