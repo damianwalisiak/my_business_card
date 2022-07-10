@@ -38,6 +38,25 @@ class MyApp extends StatelessWidget {
                     radius: 100,
                   ),
                 ),
+                SizedBox(height: 10),
+                Text(
+                  'Damian Walisiak',
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Flutter developer',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    backgroundColor: Color.fromARGB(255, 154, 223, 255),
+                    fontWeight: FontWeight.w400,
+                  ),
+                )
               ],
             ),
           ),
