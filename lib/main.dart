@@ -25,6 +25,22 @@ class MyApp extends StatelessWidget {
               alignment: Alignment.topCenter,
             ),
           ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: const [
+                SizedBox(height: 130),
+                CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 110,
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('images/damian.jpeg'),
+                    radius: 100,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
