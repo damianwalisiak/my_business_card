@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -79,7 +82,14 @@ class MyApp extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      const phoneNumber = '+48555555555';
+                      const url = 'tel:$phoneNumber';
+
+                      if (await canLaunchUrlString(url)) {
+                        await launchUrlString(url);
+                      }
+                    },
                   ),
                 ),
                 Container(
@@ -103,7 +113,14 @@ class MyApp extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      const phoneNumber = '+48555555555';
+                      const url = 'sms:$phoneNumber';
+
+                      if (await canLaunchUrlString(url)) {
+                        await launchUrlString(url);
+                      }
+                    },
                   ),
                 ),
                 Container(
@@ -111,7 +128,7 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton.icon(
                     label: const Text(
-                      ' Mail: dwalisiak@gmail.com ',
+                      ' Mail: damianw@gmail.com ',
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.black,
@@ -127,7 +144,19 @@ class MyApp extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      const toEmail = '';
+                      const subject =
+                          'Hello, this is my business card - Damian Walisiak';
+                      const message =
+                          'Hello!\n\nWe met, that is why I am sending you my details if you would like to contact me: \n tel: +48555555555 \n facebook: https://facebok.com/555/ \n instagram: https://www.instagram.com/555/ \n linkedin: https://www.linkedin.com/in/555/ \n ';
+                      final url =
+                          'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull(message)}';
+
+                      if (await canLaunchUrlString(url)) {
+                        await launchUrlString(url);
+                      }
+                    },
                   ),
                 ),
               ],
