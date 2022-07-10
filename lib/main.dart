@@ -28,9 +28,9 @@ class MyApp extends StatelessWidget {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                SizedBox(height: 130),
-                CircleAvatar(
+              children: [
+                const SizedBox(height: 130),
+                const CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 110,
                   child: CircleAvatar(
@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
                     radius: 100,
                   ),
                 ),
-                SizedBox(height: 10),
-                Text(
+                const SizedBox(height: 10),
+                const Text(
                   'Damian Walisiak',
                   style: TextStyle(
                     fontSize: 40,
@@ -47,8 +47,8 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 10),
-                Text(
+                const SizedBox(height: 10),
+                const Text(
                   'Flutter developer',
                   style: TextStyle(
                     fontSize: 20,
@@ -56,7 +56,80 @@ class MyApp extends StatelessWidget {
                     backgroundColor: Color.fromARGB(255, 154, 223, 255),
                     fontWeight: FontWeight.w400,
                   ),
-                )
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton.icon(
+                    label: const Text(
+                      ' Tel: +48 555 555 555 ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        backgroundColor: Color.fromARGB(255, 154, 223, 255),
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    icon: const Icon(Icons.call_rounded),
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color.fromARGB(255, 154, 223, 255),
+                      fixedSize: const Size(300, 50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton.icon(
+                    label: const Text(
+                      ' SMS: +48 555 555 555 ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        backgroundColor: Color.fromARGB(255, 154, 223, 255),
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    icon: const Icon(Icons.mail_outline_rounded),
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color.fromARGB(255, 154, 223, 255),
+                      fixedSize: const Size(300, 50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton.icon(
+                    label: const Text(
+                      ' Mail: dwalisiak@gmail.com ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        backgroundColor: Color.fromARGB(255, 154, 223, 255),
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    icon: const Icon(Icons.alternate_email_rounded),
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color.fromARGB(255, 154, 223, 255),
+                      fixedSize: const Size(300, 50),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
               ],
             ),
           ),
