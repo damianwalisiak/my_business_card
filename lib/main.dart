@@ -129,7 +129,7 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton.icon(
                     label: const Text(
-                      ' Mail: damianw@gmail.com ',
+                      ' Mail: dwdwdw@gmail.com ',
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.black,
@@ -150,7 +150,7 @@ class MyApp extends StatelessWidget {
                       const subject =
                           'Hello, this is my business card - Damian Walisiak';
                       const message =
-                          'Hello!\n\nWe met, that is why I am sending you my details if you would like to contact me: \n tel: +48555555555 \n facebook: https://facebok.com/555/ \n instagram: https://www.instagram.com/555/ \n linkedin: https://www.linkedin.com/in/555/ \n ';
+                          'Hello!\n\nWe met, that is why I am sending you my details if you would like to contact me: \n tel: +48555555555 \n facebook: https://facebok.com/flutter/ \n instagram: https://www.instagram.com/flutter/ \n linkedin: https://www.linkedin.com/in/flutter/ \n ';
                       final url =
                           'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull(message)}';
 
@@ -165,7 +165,16 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     InkWell(
-                      onTap: () {},
+                      onTap: () async {
+                        const url = 'https://facebok.com/flutter/';
+
+                        if (await canLaunch(url)) {
+                          await launch(
+                            url,
+                            forceSafariVC: false,
+                          );
+                        }
+                      },
                       customBorder: const CircleBorder(),
                       child: const Icon(
                         FontAwesomeIcons.facebook,
@@ -174,7 +183,16 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () async {
+                        const url = 'https://twitter.com/flutter/';
+
+                        if (await canLaunch(url)) {
+                          await launch(
+                            url,
+                            forceSafariVC: false,
+                          );
+                        }
+                      },
                       customBorder: const CircleBorder(),
                       child: const Icon(
                         FontAwesomeIcons.twitter,
@@ -183,7 +201,16 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () async {
+                        const url = 'https://linkedin.com/flutter/';
+
+                        if (await canLaunch(url)) {
+                          await launch(
+                            url,
+                            forceSafariVC: false,
+                          );
+                        }
+                      },
                       customBorder: const CircleBorder(),
                       child: const Icon(
                         FontAwesomeIcons.linkedinIn,
@@ -192,7 +219,16 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () async {
+                        const url = 'https://github.com/flutter/';
+
+                        if (await canLaunch(url)) {
+                          await launch(
+                            url,
+                            forceSafariVC: false,
+                          );
+                        }
+                      },
                       customBorder: const CircleBorder(),
                       child: const Icon(
                         FontAwesomeIcons.github,
