@@ -1,6 +1,7 @@
+*.dart linguist-language=Solidity
 *.html linguist-detectable=false
 *.cpp linguist-detectable=false
 *.c linguist-detectable=false
 *.java linguist-detectable=false
 *.csharp linguist-detectable=false
-*.xcmake linguist-detectable=false
+*.cmake linguist-detectable=false
