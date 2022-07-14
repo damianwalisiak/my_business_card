@@ -150,7 +150,7 @@ class MyApp extends StatelessWidget {
                       const subject =
                           'Hello, this is my business card - Damian Walisiak';
                       const message =
-                          'Hello!\n\nWe met, that is why I am sending you my details if you would like to contact me: \n tel: +48555555555 \n facebook: https://facebok.com/flutter/ \n instagram: https://www.instagram.com/flutter/ \n linkedin: https://www.linkedin.com/in/flutter/ \n ';
+                          'Hello!\n\nWe met, that is why I am sending you my details if you would like to contact me: \n tel: +48555555555 \n facebook: https://www.facebook.com/Flutter-House-112650098089526 \n instagram: https://www.instagram.com/flutter/ \n linkedin: https://www.linkedin.com/company/flutterofficial/ \n ';
                       final url =
                           'mailto:$toEmail?subject=${Uri.encodeFull(subject)}&body=${Uri.encodeFull(message)}';
 
@@ -166,7 +166,8 @@ class MyApp extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () async {
-                        const url = 'https://facebok.com/flutter/';
+                        const url =
+                            'https://www.facebook.com/Flutter-House-112650098089526';
 
                         if (await canLaunch(url)) {
                           await launch(
@@ -184,7 +185,7 @@ class MyApp extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () async {
-                        const url = 'https://twitter.com/flutter/';
+                        const url = 'https://twitter.com/FlutterDev';
 
                         if (await canLaunch(url)) {
                           await launch(
@@ -202,7 +203,8 @@ class MyApp extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () async {
-                        const url = 'https://linkedin.com/flutter/';
+                        const url =
+                            'https://www.linkedin.com/company/flutterofficial/';
 
                         if (await canLaunch(url)) {
                           await launch(
