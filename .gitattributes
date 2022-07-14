@@ -1,4 +1,3 @@
-
+*.cmake linguist-language=false
 *.html linguist-detectable=false
 *.cpp linguist-detectable=false
-
