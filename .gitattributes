@@ -1,4 +1,4 @@
-*.dart linguist-language=Solidity
+*.dart linguist-language=true
 *.html linguist-detectable=false
 *.cpp linguist-detectable=false
 *.c linguist-detectable=false
