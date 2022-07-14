@@ -3,4 +3,4 @@
 *.c linguist-detectable=false
 *.java linguist-detectable=false
 *.csharp linguist-detectable=false
-*.cmake linguist-detectable=false
+*.xcmake linguist-detectable=false
