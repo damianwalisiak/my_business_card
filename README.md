@@ -10,7 +10,6 @@ The idea of this event was to demonstrate the basic functions of flutter, aimed 
 The app showed how to personalise details such as photo size, app background, text style and size. In addition, calling, texting and email functions were added. From within the app, it is possible to open social media links. These functions are made possible by the url_luncher package.
 
 
-Translated with www.DeepL.com/Translator (free version)
 
 ## Getting Started
 
